@@ -4,6 +4,10 @@ iatest=$(expr index "$-" i)
 #######################################################
 # BashRC for debian-cruxx
 #######################################################
+force_color_prompt=yes
+export LESS='-R'
+export MANPAGER='batcat --pager "less -R"'
+export GROFF_NO_SGR=1
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -65,7 +69,7 @@ export LESS_TERMCAP_ue=$'\\E[0m'
 export LESS_TERMCAP_us=$'\\E[01;32m'
 
 # Edit this .bashrc file
-#alias nbrc='nano ~/.bashrc'
+alias nbrc='nano ~/.bashrc'
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
@@ -81,8 +85,8 @@ alias mkdir='mkdir -p'
 #alias less='less -R'
 #alias cls='clear'
 #alias apt-get='sudo apt-get'
-alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
+#alias multitail='multitail --no-repeat -c'
+#alias freshclam='sudo freshclam'
 #alias vi='nvim'
 #alias svi='sudo vi'
 #alias vis='nvim "+set si"'
